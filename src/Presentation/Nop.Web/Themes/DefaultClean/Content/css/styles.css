@@ -1468,6 +1468,18 @@ label, label + * {
 .item-box .sku {
     margin: 0 0 15px;
 }
+.item-box .author {
+    margin: 0 0 15px;
+}
+.item-box .publisher {
+    margin: 0 0 15px;
+}
+.item-box .isbn10 {
+    margin: 0 0 15px;
+}
+.item-box .isbn13 {
+    margin: 0 0 15px;
+}
 .item-box .product-rating-box {
     display: inline-block;
 	margin: 0 0 10px;
@@ -1872,6 +1884,14 @@ label, label + * {
 .overview .additional-details div,
 .variant-overview .additional-details div {
 	margin: 0 0 8px;
+}
+.overview .publication-details,
+.variant-overview .publication-details {
+    margin: 0 0 20px;
+}
+.overview .publication-details div,
+.variant-overview .publication-details div {
+    margin: 0 0 8px;
 }
 .overview .delivery,
 .variant-overview .delivery {

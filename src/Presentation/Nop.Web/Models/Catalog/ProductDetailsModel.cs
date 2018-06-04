@@ -43,6 +43,16 @@ namespace Nop.Web.Models.Catalog
         public string MetaTitle { get; set; }
         public string SeName { get; set; }
 
+        public string Author { get; set; }
+        public string Publisher { get; set; }
+        public string ISBN10 { get; set; }
+        public string ISBN13 { get; set; }
+        public bool IsPublication { get; set; }
+        public bool ShowAuthor { get; set; }
+        public bool ShowPublisher { get; set; }
+        public bool ShowISBN10 { get; set; }
+        public bool ShowISBN13 { get; set; }
+
         public ProductType ProductType { get; set; }
 
         public bool ShowSku { get; set; }

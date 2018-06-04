@@ -44,6 +44,31 @@ namespace Nop.Core.Domain.Catalog
         public bool ShowSkuOnCatalogPages { get; set; }
 
         /// <summary>
+        /// Gets or sets a value indicating whether to display author on the product details page
+        /// </summary>
+        public bool ShowAuthorOnProductDetailsPage { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether to display author on catalog pages
+        /// </summary>
+        public bool ShowAuthorOnCatalogPages { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether to display publisher
+        /// </summary>
+        public bool ShowPublisher { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether to display ISBN10
+        /// </summary>
+        public bool ShowISBN10 { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether to display ISBN13
+        /// </summary>
+        public bool ShowISBN13 { get; set; }
+
+        /// <summary>
         /// Gets or sets a value indicating whether to display manufacturer part number of a product
         /// </summary>
         public bool ShowManufacturerPartNumber { get; set; }

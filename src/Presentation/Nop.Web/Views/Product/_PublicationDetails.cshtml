@@ -1,0 +1,40 @@
+﻿@model ProductDetailsModel
+@using Nop.Core.Domain.Catalog
+
+@if (Model.IsPublication)
+{
+    <div class="publication-details">
+        @*Author*@
+        @if ((!string.IsNullOrWhiteSpace(Model.Author) || Model.ManageInventoryMethod == ManageInventoryMethod.ManageStockByAttributes) && Model.ShowAuthor)
+        {
+            <div class="sku" @(string.IsNullOrWhiteSpace(Model.Author) ? Html.Raw("style=\"display:none\"") : null)>
+                <span class="label">@T("Products.Author"):</span>
+                <span class="value" itemprop="author" id="author-@Model.Id">@Model.Author</span>
+            </div>
+        }
+        @*Publisher*@
+        @if ((!string.IsNullOrWhiteSpace(Model.Publisher) || Model.ManageInventoryMethod == ManageInventoryMethod.ManageStockByAttributes) && Model.ShowPublisher)
+        {
+            <div class="publisher" @(string.IsNullOrWhiteSpace(Model.Publisher) ? Html.Raw("style=\"display:none\"") : null)>
+                <span class="label">@T("Products.Publisher"):</span>
+                <span class="value" id="pub-@Model.Id">@Model.Publisher</span>
+            </div>
+        }
+        @*ISBN10*@
+        @if ((!string.IsNullOrWhiteSpace(Model.ISBN10) || Model.ManageInventoryMethod == ManageInventoryMethod.ManageStockByAttributes) && Model.ShowISBN10)
+        {
+            <div class="isbn10" @(string.IsNullOrWhiteSpace(Model.ISBN10) ? Html.Raw("style=\"display:none\"") : null)>
+                <span class="label">@T("Products.ISBN10"):</span>
+                <span class="value" id="isbn10-@Model.Id">@Model.ISBN10</span>
+            </div>
+        }
+        @*ISBN13*@
+        @if ((!string.IsNullOrWhiteSpace(Model.ISBN13) || Model.ManageInventoryMethod == ManageInventoryMethod.ManageStockByAttributes) && Model.ShowISBN13)
+        {
+            <div class="isbn13" @(string.IsNullOrWhiteSpace(Model.ISBN13) ? Html.Raw("style=\"display:none\"") : null)>
+                <span class="label">@T("Products.ISBN13"):</span>
+                <span class="value" id="isbn13-@Model.Id">@Model.ISBN13</span>
+            </div>
+        }
+    </div>
+}

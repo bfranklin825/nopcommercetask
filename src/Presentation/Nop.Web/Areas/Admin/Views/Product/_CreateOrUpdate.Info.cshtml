@@ -28,6 +28,7 @@
         $("#@Html.IdFor(model => model.RequireOtherProducts)").click(toggleRequireOtherProducts);
         $("#@Html.IdFor(model => model.AvailableForPreOrder)").click(togglePreOrder);
         $("#@Html.IdFor(model => model.IsGiftCard)").click(toggleGiftCard);
+        $("#@Html.IdFor(model => model.IsPublication)").click(toggleIsPublication);
         $("#@Html.IdFor(model => model.CustomerEntersPrice)").click(toggleCustomerEntersPrice);
         $("#@Html.IdFor(model => model.BasepriceEnabled)").click(toggleBasepriceEnabled);
         $("#@Html.IdFor(model => model.IsDownload)").click(toggleDownloadableProduct);
@@ -52,6 +53,7 @@
         togglePreOrder();
         toggleRequireOtherProducts();
         toggleGiftCard();
+        toggleIsPublication();
         toggleCustomerEntersPrice();
         toggleBasepriceEnabled();
         toggleDownloadableProduct();
@@ -158,6 +160,20 @@
         } else {
             $('#pnlGiftCardType').hide();
             $('#pnlOverriddenGiftCardAmount').hide();
+        }
+    }
+
+    function toggleIsPublication() {
+        if ($('#@Html.IdFor(model => model.IsPublication)').is(':checked')) {
+            $('#pnlAuthor').show();
+            $('#pnlPublisher').show();
+            $('#pnlISBN10').show();
+            $('#pnlISBN13').show();
+        } else {
+            $('#pnlAuthor').hide();
+            $('#pnlPublisher').hide();
+            $('#pnlISBN10').hide();
+            $('#pnlISBN13').hide();
         }
     }
 
@@ -731,6 +747,60 @@
                             </div>
                         </div>
                     }
+                </div>
+            </div>
+            <div class="panel panel-default" @(Model.ProductEditorSettingsModel.IsPublication ? null : "advanced-setting") id="group-publication">
+                <div class="panel-heading">
+                    @T("Admin.Catalog.Products.Publication")
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="IsPublication" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="IsPublication" />
+                            <span asp-validation-for="IsPublication"></span>
+                        </div>
+                    </div>
+                    <nop-nested-setting asp-for="IsPublication">
+                        <div class="form-group" id="pnlAuthor">
+                            <div class="col-md-3">
+                                <nop-label asp-for="Author" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Author" />
+                                <span asp-validation-for="Author"></span>
+                            </div>
+                        </div>
+                        <div class="form-group" id="pnlPublisher">
+                            <div class="col-md-3">
+                                <nop-label asp-for="Publisher" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="Publisher" />
+                                <span asp-validation-for="Publisher"></span>
+                            </div>
+                        </div>
+                        <div class="form-group" id="pnlISBN10">
+                            <div class="col-md-3">
+                                <nop-label asp-for="ISBN10" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="ISBN10" />
+                                <span asp-validation-for="ISBN10"></span>
+                            </div>
+                        </div>
+                        <div class="form-group" id="pnlISBN13">
+                            <div class="col-md-3">
+                                <nop-label asp-for="ISBN13" />
+                            </div>
+                            <div class="col-md-9">
+                                <nop-editor asp-for="ISBN13" />
+                                <span asp-validation-for="ISBN13"></span>
+                            </div>
+                        </div>
+                    </nop-nested-setting>
                 </div>
             </div>
             <div class="panel panel-default @(Model.ProductEditorSettingsModel.IsGiftCard ? null : "advanced-setting")" id="group-giftcard">

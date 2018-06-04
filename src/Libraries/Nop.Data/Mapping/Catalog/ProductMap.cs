@@ -17,6 +17,10 @@ namespace Nop.Data.Mapping.Catalog
             this.Property(p => p.Name).IsRequired().HasMaxLength(400);
             this.Property(p => p.MetaKeywords).HasMaxLength(400);
             this.Property(p => p.MetaTitle).HasMaxLength(400);
+            this.Property(p => p.Author).HasMaxLength(400);
+            this.Property(p => p.Publisher).HasMaxLength(400);
+            this.Property(p => p.ISBN10).HasMaxLength(10);
+            this.Property(p => p.ISBN13).HasMaxLength(14);
             this.Property(p => p.Sku).HasMaxLength(400);
             this.Property(p => p.ManufacturerPartNumber).HasMaxLength(400);
             this.Property(p => p.Gtin).HasMaxLength(400);

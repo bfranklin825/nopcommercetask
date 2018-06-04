@@ -2820,6 +2820,36 @@
   <LocaleResource Name="Admin.Catalog.Products.Fields.IsFreeShipping.Hint">
     <Value>Check if this product comes with FREE shipping.</Value>
   </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.IsPublication">
+    <Value>Is publication</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.IsPublication.Hint">
+    <Value>Check if it is a publication.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.Author">
+    <Value>Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.Author.Hint">
+    <Value>The author of the publication.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.Publisher">
+    <Value>Publisher</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.Publisher.Hint">
+    <Value>The publisher of the publication.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.ISBN10">
+    <Value>ISBN10</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.ISBN10.Hint">
+    <Value>The International Standard Book Number (10 digits before 2007)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.ISBN13">
+    <Value>ISBN13</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.ISBN13.Hint">
+    <Value>The International Standard Book Number (13 digits after 2007)</Value>
+  </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.Fields.IsGiftCard">
     <Value>Is gift card</Value>
   </LocaleResource>
@@ -3215,6 +3245,9 @@
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.Fields.Width.Hint">
     <Value>The product width.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Publication">
+    <Value>Publication</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.GiftCard">
     <Value>Gift card</Value>
@@ -5522,6 +5555,36 @@
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowSkuOnProductDetailsPage">
     <Value>Show SKU on product details page</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowAuthorOnProductDetailsPage">
+    <Value>Show Author on product details page</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowAuthorOnCatalogPages">
+    <Value>Show Author on catalog pages</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowPublisher">
+    <Value>Show Publisher</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowISBN10">
+    <Value>Show ISBN10</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowISBN13">
+    <Value>Show ISBN13</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowAuthorOnProductDetailsPage.Hint">
+    <Value>Check to show author on product details page in the public store.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowAuthorOnCatalogPages.Hint">
+    <Value>Check to show author on catalog pages in the public store.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowPublisher.Hint">
+    <Value>Check to show publisher on product details page in the public store.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowISBN10.Hint">
+    <Value>Check to show ISBN10 on product details page in the public store.</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowISBN13.Hint">
+    <Value>Check to show ISBN13 on product details page in the public store.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowSkuOnProductDetailsPage.Hint">
     <Value>Check to show product SKU on the product details page in public store.</Value>
@@ -11280,6 +11343,18 @@
   <LocaleResource Name="Admin.Orders.Products.SKU">
     <Value>SKU</Value>
   </LocaleResource>
+  <LocaleResource Name="Admin.Orders.Products.Author">
+    <Value>Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Orders.Products.Publisher">
+    <Value>Publisher</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Orders.Products.ISBN10">
+    <Value>ISBN10</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Orders.Products.ISBN13">
+    <Value>ISBN13</Value>
+  </LocaleResource>
   <LocaleResource Name="Admin.Orders.Products.Total">
     <Value>Total</Value>
   </LocaleResource>
@@ -11453,6 +11528,18 @@
   </LocaleResource>
   <LocaleResource Name="Admin.Orders.Shipments.Products.SKU">
     <Value>SKU</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Orders.Shipments.Products.Author">
+    <Value>Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Orders.Shipments.Products.Publisher">
+    <Value>Publisher</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Orders.Shipments.Products.ISBN10">
+    <Value>ISBN10</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Orders.Shipments.Products.ISBN13">
+    <Value>ISBN13</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Orders.Shipments.Products.Warehouse">
     <Value>Warehouse</Value>
@@ -16037,6 +16124,18 @@
   </LocaleResource>
   <LocaleResource Name="Products.Sku">
     <Value>SKU</Value>
+  </LocaleResource>
+  <LocaleResource Name="Products.Author">
+    <Value>Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="Products.Publisher">
+    <Value>Publisher</Value>
+  </LocaleResource>
+  <LocaleResource Name="Products.ISBN10">
+    <Value>ISBN10</Value>
+  </LocaleResource>
+  <LocaleResource Name="Products.ISBN13">
+    <Value>ISBN13</Value>
   </LocaleResource>
   <LocaleResource Name="Products.Specs">
     <Value>Products specifications</Value>

@@ -23,6 +23,26 @@ namespace Nop.Web.Areas.Admin.Models.Settings
         public bool ShowSkuOnCatalogPages { get; set; }
         public bool ShowSkuOnCatalogPages_OverrideForStore { get; set; }
 
+        [NopResourceDisplayName("Admin.Configuration.Settings.Catalog.ShowAuthorOnCatalogPages")]
+        public bool ShowAuthorOnCatalogPages { get; set; }
+        public bool ShowAuthorOnCatalogPages_OverrideForStore { get; set; }
+
+        [NopResourceDisplayName("Admin.Configuration.Settings.Catalog.ShowAuthorOnProductDetailsPage")]
+        public bool ShowAuthorOnProductDetailsPage { get; set; }
+        public bool ShowAuthorOnProductDetailsPage_OverrideForStore { get; set; }
+
+        [NopResourceDisplayName("Admin.Configuration.Settings.Catalog.ShowPublisher")]
+        public bool ShowPublisher { get; set; }
+        public bool ShowPublisher_OverrideForStore { get; set; }
+
+        [NopResourceDisplayName("Admin.Configuration.Settings.Catalog.ShowISBN10")]
+        public bool ShowISBN10 { get; set; }
+        public bool ShowISBN10_OverrideForStore { get; set; }
+
+        [NopResourceDisplayName("Admin.Configuration.Settings.Catalog.ShowISBN13")]
+        public bool ShowISBN13 { get; set; }
+        public bool ShowISBN13_OverrideForStore { get; set; }
+
         [NopResourceDisplayName("Admin.Configuration.Settings.Catalog.ShowManufacturerPartNumber")]
         public bool ShowManufacturerPartNumber { get; set; }
         public bool ShowManufacturerPartNumber_OverrideForStore { get; set; }

@@ -81,6 +81,9 @@ namespace Nop.Web.Areas.Admin.Models.Settings
         public bool RequireOtherProductsAddedToTheCart { get; set; }
 
         [NopResourceDisplayName("Admin.Configuration.Settings.ProductEditor.IsGiftCard")]
+        public bool IsPublication { get; set; }
+
+        [NopResourceDisplayName("Admin.Configuration.Settings.ProductEditor.IsGiftCard")]
         public bool IsGiftCard { get; set; }
 
         [NopResourceDisplayName("Admin.Configuration.Settings.ProductEditor.DownloadableProduct")]

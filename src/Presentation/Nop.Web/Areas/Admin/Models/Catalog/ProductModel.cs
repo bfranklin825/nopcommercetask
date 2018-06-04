@@ -120,6 +120,17 @@ namespace Nop.Web.Areas.Admin.Models.Catalog
         [NopResourceDisplayName("Admin.Catalog.Products.Fields.GTIN")]
         public virtual string Gtin { get; set; }
 
+        [NopResourceDisplayName("Admin.Catalog.Products.Fields.IsPublication")]
+        public bool IsPublication { get; set; }
+        [NopResourceDisplayName("Admin.Catalog.Products.Fields.Author")]
+        public string Author { get; set; }
+        [NopResourceDisplayName("Admin.Catalog.Products.Fields.Publisher")]
+        public string Publisher { get; set; }
+        [NopResourceDisplayName("Admin.Catalog.Products.Fields.ISBN10")]
+        public string ISBN10 { get; set; }
+        [NopResourceDisplayName("Admin.Catalog.Products.Fields.ISBN13")]
+        public string ISBN13 { get; set; }
+
         [NopResourceDisplayName("Admin.Catalog.Products.Fields.IsGiftCard")]
         public bool IsGiftCard { get; set; }
         [NopResourceDisplayName("Admin.Catalog.Products.Fields.GiftCardType")]

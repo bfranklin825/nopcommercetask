@@ -58,6 +58,31 @@ namespace Nop.Core.Domain.Catalog
         public string FullDescription { get; set; }
 
         /// <summary>
+        /// Gets or sets the author
+        /// </summary>
+        public string Author { get; set; }
+
+        /// <summary>
+        /// Gets or set the publisher
+        /// </summary>
+        public string Publisher { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ISBN10 
+        /// </summary>
+        public string ISBN10 { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ISBN13 
+        /// </summary>
+        public string ISBN13 { get; set; }
+
+        /// <summary>
+        /// Gets or sets the value indicating if this product is a publication
+        /// </summary>
+        public bool IsPublication { get; set; }
+
+        /// <summary>
         /// Gets or sets the admin comment
         /// </summary>
         public string AdminComment { get; set; }

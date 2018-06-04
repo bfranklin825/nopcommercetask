@@ -38,7 +38,7 @@ namespace Nop.Web.Factories
     public partial class ProductModelFactory : IProductModelFactory
     {
         #region Fields
-        
+
         private readonly ISpecificationAttributeService _specificationAttributeService;
         private readonly ICategoryService _categoryService;
         private readonly IManufacturerService _manufacturerService;
@@ -211,17 +211,17 @@ namespace Nop.Web.Factories
             switch (product.ProductType)
             {
                 case ProductType.GroupedProduct:
-                {
-                    //grouped product
-                    PrepareGroupedProductOverviewPriceModel(product, priceModel);
-                }
+                    {
+                        //grouped product
+                        PrepareGroupedProductOverviewPriceModel(product, priceModel);
+                    }
                     break;
                 case ProductType.SimpleProduct:
                 default:
-                {
-                    //simple product
-                    PrepareSimpleProductOverviewPriceModel(product, priceModel);
-                }
+                    {
+                        //simple product
+                        PrepareSimpleProductOverviewPriceModel(product, priceModel);
+                    }
                     break;
             }
 
@@ -1125,6 +1125,7 @@ namespace Nop.Web.Factories
                     FullDescription = product.GetLocalized(x => x.FullDescription),
                     SeName = product.GetSeName(),
                     Sku = product.Sku,
+                    Author = product.GetLocalized(x => x.Author),                   
                     ProductType = product.ProductType,
                     MarkAsNew = product.MarkAsNew &&
                         (!product.MarkAsNewStartDateTimeUtc.HasValue || product.MarkAsNewStartDateTimeUtc.Value < DateTime.UtcNow) &&
@@ -1183,6 +1184,15 @@ namespace Nop.Web.Factories
                 SeName = product.GetSeName(),
                 ProductType = product.ProductType,
                 ShowSku = _catalogSettings.ShowSkuOnProductDetailsPage,
+                Author = product.GetLocalized(x => x.Author),
+                Publisher = product.GetLocalized(x => x.Publisher),
+                ISBN10 = product.ISBN10,
+                ISBN13 = product.ISBN13,
+                IsPublication = product.IsPublication,
+                ShowAuthor = _catalogSettings.ShowAuthorOnProductDetailsPage,
+                ShowPublisher = _catalogSettings.ShowPublisher,
+                ShowISBN10 = _catalogSettings.ShowISBN10,
+                ShowISBN13 = _catalogSettings.ShowISBN13,
                 Sku = product.Sku,
                 ShowManufacturerPartNumber = _catalogSettings.ShowManufacturerPartNumber,
                 FreeShippingNotificationEnabled = _catalogSettings.ShowFreeShippingNotification,
@@ -1274,8 +1284,8 @@ namespace Nop.Web.Factories
             {
                 model.ProductTags = PrepareProductTagModels(product);
             }
-            
-           //pictures
+
+            //pictures
             model.DefaultPictureZoomEnabled = _mediaSettings.DefaultPictureZoomEnabled;
             model.DefaultPictureModel = PrepareProductDetailsPictureModel(product, isAssociatedProduct, out IList<PictureModel> allPictureModels);
             model.PictureModels = allPictureModels;
@@ -1313,7 +1323,7 @@ namespace Nop.Web.Factories
 
             //product attributes
             model.ProductAttributes = PrepareProductAttributeModels(product, updatecartitem);
-            
+
             //product specifications
             //do not prepare this model for the associated products. anyway it's not used
             if (!isAssociatedProduct)
@@ -1429,9 +1439,9 @@ namespace Nop.Web.Factories
                 pageIndex = page.Value - 1;
             }
 
-            var list = _productService.GetAllProductReviews(customerId: _workContext.CurrentCustomer.Id, 
-                approved: null, 
-                pageIndex: pageIndex, 
+            var list = _productService.GetAllProductReviews(customerId: _workContext.CurrentCustomer.Id,
+                approved: null,
+                pageIndex: pageIndex,
                 pageSize: pageSize);
 
             var productReviews = new List<CustomerProductReviewModel>();

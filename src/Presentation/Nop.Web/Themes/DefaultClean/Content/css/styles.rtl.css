@@ -1890,6 +1890,15 @@ label, label + * {
 .variant-overview .additional-details div {
 	margin: 0 0 8px;
 }
+.overview .publication-details,
+.variant-overview .publication-details {
+    margin: 0 0 20px;
+}
+.overview .publication-details div,
+.variant-overview .publication-details div {
+    margin: 0 0 8px;
+}
+
 .overview .delivery,
 .variant-overview .delivery {
 	overflow: hidden;
