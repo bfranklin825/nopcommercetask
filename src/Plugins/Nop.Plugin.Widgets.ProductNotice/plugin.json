@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Product Notice",
+  "SystemName": "Widgets.ProductNotice",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.00" ],
+  "Author": "Barry Franklin",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.ProductNotice.dll",
+  "Description": "This simple plugin allows you to put a notice on the product details page in the public store."
+}
