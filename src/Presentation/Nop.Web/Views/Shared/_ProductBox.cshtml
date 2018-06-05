@@ -32,6 +32,12 @@
         <h2 class="product-title">
             <a href="@Url.RouteUrl("Product", new {SeName = Model.SeName})">@Model.Name</a>
         </h2>
+        @if (catalogSettings.ShowAuthorOnCatalogPages && !string.IsNullOrEmpty(Model.Author))
+        {
+            <div class="author">
+               @T("Products.Author"): @Model.Author
+            </div>
+        }
         @if (catalogSettings.ShowSkuOnCatalogPages && !string.IsNullOrEmpty(Model.Sku))
         {
             <div class="sku">
